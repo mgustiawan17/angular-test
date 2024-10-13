@@ -49,8 +49,18 @@ export class ExpolersComponent implements OnInit {
     );
   }
 
+  toggleSubfolder(subfolderId: number): void {
+    if (this.activeSubfolderId === subfolderId) {
+      this.activeSubfolderId = null;
+      this.files = [];
+    } else {
+      this.activeSubfolderId = subfolderId;
+      this.loadFiles(subfolderId);
+    }
+  }
+
   loadFiles(subfolderId: any): void {
-    this.expolersService.getSubFolder(subfolderId).subscribe(
+    this.expolersService.getFiles(subfolderId).subscribe(
       (data: any) => {
         this.files = data;
         this.activeSubfolderId = subfolderId;
