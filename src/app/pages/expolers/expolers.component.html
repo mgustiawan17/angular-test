@@ -1,0 +1,130 @@
+<div ng-controller="FolderController">
+  <div style="display: flex; height: 97vh; box-sizing: border-box">
+    <!-- Sidebar kiri untuk folder -->
+    <div
+      style="
+        width: 50%;
+        height: 100%;
+        border-right: 1px solid #ccc;
+        box-sizing: border-box;
+      "
+    >
+      <div
+        style="
+          font-size: 1.6em;
+          font-weight: bold;
+          color: white;
+          background-color: #ad1d0d;
+          text-align: center;
+          padding: 20px 30px;
+          margin-bottom: 30px;
+          margin-right: 10px;
+          border-radius: 10px;
+        "
+      >
+        Panel Kiri
+      </div>
+      <div
+        class="card"
+        style="
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          margin-right: 10px;
+          height: 80vh;
+        "
+      >
+        <div
+          class="m-portlet__body"
+          style="margin-left: 30px; margin-right: 20px"
+        >
+          <div class="form-group m-form__group row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <h3>Folder</h3>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Nama File</th>
+                    <th>Size</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    *ngFor="let folder of folders"
+                    (click)="loadSubFolders(folder.id)"
+                  >
+                    <td>{{ folder.name_folder }}</td>
+                    <td>{{ folder.ukuran_folder }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tabel kanan untuk subfolder dan file -->
+    <div
+      style="
+        width: 50%;
+        height: 100%;
+        padding-left: 20px;
+        box-sizing: border-box;
+      "
+    >
+      <div
+        style="
+          font-size: 1.6em;
+          font-weight: bold;
+          color: white;
+          background-color: #ad1d0d;
+          text-align: center;
+          padding: 20px 30px;
+          margin-bottom: 30px;
+          margin-right: 10px;
+          border-radius: 10px;
+        "
+      >
+        Panel Kanan
+      </div>
+      <div
+        class="card"
+        style="
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          margin-right: 10px;
+          height: 80vh;
+        "
+      >
+        <div
+          class="m-portlet__body"
+          style="margin-left: 30px; margin-right: 20px"
+        >
+          <div class="form-group m-form__group row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+              <h3>SubFolder</h3>
+
+              <table *ngIf="subfolders.length > 0">
+                <thead>
+                  <tr>
+                    <th>Nama File</th>
+                    <th>Size</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr
+                    *ngFor="let subfolder of subfolders"
+                    (click)="loadFiles(subfolder.id)"
+                  >
+                    <td>{{ subfolder.name_subfolder }}</td>
+                    <td>{{ subfolder.ukuran_subfolder }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

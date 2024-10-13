@@ -1,0 +1,24 @@
+table {
+  width: 100%;
+  border-collapse: collapse; /* Menyatukan border */
+}
+
+th,
+td {
+  padding: 8px; /* Menambah jarak dalam sel */
+  text-align: left; /* Rata kiri untuk teks */
+  border-bottom: 1px solid #ddd; /* Border bawah pada setiap sel */
+}
+
+tbody tr {
+  border-bottom: 1px solid #ddd; /* Border bawah pada setiap baris */
+}
+
+/* Tambahan untuk efek hover jika diinginkan */
+tbody tr:hover {
+  background-color: #f1f1f1; /* Warna latar belakang saat hover */
+}
+
+.custom-table {
+  min-width: 50rem;
+}
