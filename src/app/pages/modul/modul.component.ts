@@ -88,7 +88,7 @@ export class ModulComponent implements OnInit {
   deleteProduct(productId: number) {
     if (confirm('Are you sure you want to delete this product?')) {
       // Logika untuk menghapus produk berdasarkan ID
-      this.ModulService.deleteCheckin(productId).subscribe(
+      this.ModulService.deleteModul(productId).subscribe(
         (response) => {
           console.log('Product deleted:', response);
           this.loadModulData(); // Reload data setelah delete
@@ -114,7 +114,7 @@ export class ModulComponent implements OnInit {
       name_pemateri: this.selectedNamePemateri,
     };
 
-    this.ModulService.createCheckin(payload).subscribe(
+    this.ModulService.createModul(payload).subscribe(
       (response) => {
         console.log('Data saved:', response);
         this.displayModal = false;

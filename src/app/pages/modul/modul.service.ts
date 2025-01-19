@@ -7,7 +7,7 @@ import * as baseurl from '../baseurl';
 export class ModulService {
   constructor(private http: HttpClient) {}
 
-  createCheckin(data: any): Observable<any> {
+  createModul(data: any): Observable<any> {
     return this.http.post(baseurl.baseUrl + 'modul', data);
   }
 
@@ -17,7 +17,7 @@ export class ModulService {
       .pipe(map((response: any) => response));
   }
 
-  deleteCheckin(id: number): Observable<any> {
+  deleteModul(id: number): Observable<any> {
     return this.http.delete(baseurl.baseUrl + `modul/${id}`);
   }
 }
