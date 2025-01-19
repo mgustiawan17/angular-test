@@ -1,23 +1,27 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app.routes';
-import { ExpolersComponent } from './pages/expolers/expolers.component';
-import { RouterModule, RouterOutlet } from '@angular/router';
-import { ExpolersModule } from './pages/expolers/expolers.module';
-import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
-@NgModule({
-  imports: [
-    CommonModule,
-    BrowserModule,
-    ExpolersModule,
-    HttpClientModule,
-    AppRoutingModule,
-    FormsModule,
-  ],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  bootstrap: [ExpolersComponent],
-})
-export class AppModule {}
+// import { BrowserModule } from '@angular/platform-browser';
+// import { NgModule } from '@angular/core';
+// import { AppComponent } from './app.component';
+// import { AppRoutingModule } from './app.routes';
+// import { RouterModule, RouterOutlet } from '@angular/router';
+// import { HttpClientModule } from '@angular/common/http';
+// import { FormsModule } from '@angular/forms';
+// import { CommonModule } from '@angular/common';
+// import { LoginComponent } from './auth/login/login.component';
+// import { provideAnimations } from '@angular/platform-browser/animations';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { ToastModule } from 'primeng/toast';
+// import { ModulComponent } from './pages/modul/modul.component';
+// @NgModule({
+//   // declarations: [LoginComponent],
+//   imports: [
+//     CommonModule,
+//     FormsModule,
+//     BrowserModule,
+//     HttpClientModule,
+//     AppRoutingModule,
+//     ModulComponent,
+//   ],
+//   // bootstrap: [LoginComponent],
+//   providers: [provideAnimations()],
+// })
+// export class AppModule {}

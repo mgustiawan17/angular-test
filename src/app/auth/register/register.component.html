@@ -1,0 +1,70 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="body">
+      <nav>
+        <a href="#"><img src="./assets/logo.png" alt="logo" /></a>
+      </nav>
+      <div class="form-wrapper">
+        <!-- <h2>Log In</h2> -->
+        <form (submit)="onRegister($event)">
+          <div class="logo">
+            <h1>Register</h1>
+          </div>
+          <h4>Name</h4>
+          <div>
+            <input
+              type="text"
+              id="name"
+              class="form-control"
+              [(ngModel)]="userData.name"
+              name="name"
+              required
+            />
+          </div>
+          <h4>Email</h4>
+          <div>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              [(ngModel)]="userData.email"
+              name="email"
+              required
+            />
+          </div>
+          <h4>Password</h4>
+          <div>
+            <input
+              type="password"
+              id="password"
+              class="form-control"
+              [(ngModel)]="userData.password"
+              name="password"
+              required
+            />
+          </div>
+          <h4>Password Confirm</h4>
+          <div>
+            <input
+              type="password"
+              id="password_confirm"
+              class="form-control"
+              [(ngModel)]="userData.password_confirmation"
+              name="password_confirm"
+              required
+            />
+          </div>
+          <button type="submit" id="register">Register</button>
+        </form>
+        <div class="login">
+          <p>Already have an account? <a href="/login">Log In</a></p>
+        </div>
+        <small> CopyRight 2025 © Mokhamad Gustiawan </small>
+      </div>
+    </div>
+  </body>
+</html>

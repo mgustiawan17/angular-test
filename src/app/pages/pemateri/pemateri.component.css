@@ -1,0 +1,10 @@
+.row-wrapper {
+  display: flex; /* Atur row agar saling berdampingan */
+  flex-direction: row; /* Row disusun horizontal */
+  justify-content: space-between; /* Beri ruang antar row jika diperlukan */
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,233 @@
+<div class="container">
+  <div class="grid border">
+    <!-- Logo (col-2) -->
+    <div class="col-9">
+      <app-topbar></app-topbar>
+
+      <!-- Sidebar -->
+      <div class="row-wrapper">
+        <app-sidebar></app-sidebar>
+        <div class="row">
+          <!-- Main Content -->
+          <div class="col col-7 h-screen p-3 overflow">
+            <!-- Program Section -->
+            <div
+              class="card text-white mb-5 shadow-lg"
+              style="
+                background: linear-gradient(90deg, #b881f3, #aec7f1);
+                border-radius: 15px;
+              "
+            >
+              <div
+                class="flex justify-content-between align-items-center ml-4 mr-4"
+              >
+                <div style="width: 60%">
+                  <p class="fw-bold shadow-custom">PEMOGRAMAN</p>
+                  <p class="fw-bold shadow-judul">
+                    Pemrograman Frontend Modern dengan React dan Angular
+                  </p>
+                  <p class="fw-bold shadow-isi">
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book. It has survived not only five centuries,
+                    but also the leap into electronic typesetting, remaining
+                    essentially unchanged. It was popularised in the 1960s with
+                    the release of Letraset sheets containing Lorem Ipsum
+                    passages, and more recently with desktop publishing software
+                    like Aldus PageMaker including versions of Lorem Ipsum.
+                  </p>
+                  <p class="fw-bold shadow-judul"></p>
+                  <div class="container mb-4">
+                    <div class="info-bar">
+                      <div class="info-item mr-6">
+                        <i class="pi pi-user mr-2"></i>
+                        Pemateri By Josep
+                      </div>
+                      <div class="info-item">
+                        <i class="pi pi-calendar mr-2"></i>
+                        14-06-2025
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="mt-auto d-flex justify-content-center"
+                  style="margin-bottom: 25px"
+                >
+                  <p-button
+                    label="Mulai Learning"
+                    class="p-button-success"
+                  ></p-button>
+                </div>
+              </div>
+            </div>
+
+            <h4>MODUL KOMPETENSI</h4>
+
+            <!-- Modul Kompetensi -->
+            <div class="grid">
+              <!-- Card Pemrograman -->
+              <div class="col-4">
+                <p-card styleClass="custom-card">
+                  <div class="card-content">
+                    <div class="card-title bg-blue">PEMROGRAMAN</div>
+                  </div>
+                  <div class="card-content">
+                    <h5 class="section-title">MATERI KOMPETENSI</h5>
+                    <ul class="competency-list">
+                      <li>
+                        Pemrograman Frontend Modern dengan React dan Angular
+                      </li>
+                      <li class="highlight">
+                        Pengembangan API Berstandar Industri dengan GraphQL dan
+                        REST
+                      </li>
+                      <li>
+                        Menerapkan Clean Code dan Desain Pattern dalam
+                        Pengembangan Software
+                      </li>
+                    </ul>
+                  </div>
+                </p-card>
+              </div>
+
+              <!-- Card Creative Marketing -->
+              <div class="col-4">
+                <p-card styleClass="custom-card">
+                  <!-- Bagian Judul -->
+                  <div class="card-content">
+                    <div class="card-title bg-pink">CREATIVE MARKETING</div>
+                  </div>
+                  <!-- Bagian Materi Kompetensi -->
+                  <div class="card-content">
+                    <h5 class="section-title">MATERI KOMPETENSI</h5>
+                    <ul class="competency-list">
+                      <li>
+                        Storytelling dalam Pemasaran: Mengubah Data menjadi
+                        Cerita yang Menginspirasi
+                      </li>
+                      <li>
+                        Pemasaran Viral: Bagaimana Menciptakan Konten yang Cepat
+                        Menyebar
+                      </li>
+                      <li>
+                        Memaksimalkan User-Generated Content dalam Strategi
+                        Pemasaran Kreatif
+                      </li>
+                    </ul>
+                  </div>
+                </p-card>
+              </div>
+
+              <!-- Card Manajemen SDM -->
+              <div class="col-4">
+                <p-card styleClass="custom-card">
+                  <div class="card-content">
+                    <div class="card-title bg-yellow">MANAGEMENT SDM</div>
+                  </div>
+                  <div class="card-content">
+                    <h5 class="section-title">MATERI KOMPETENSI</h5>
+                    <ul class="competency-list">
+                      <li>
+                        Storytelling dalam Pemasaran: Mengubah Data menjadi
+                        Cerita yang Menginspirasi
+                      </li>
+                      <li>
+                        Pemasaran Viral: Bagaimana Menciptakan Konten yang Cepat
+                        Menyebar
+                      </li>
+                      <li>
+                        Memaksimalkan User-Generated Content dalam Strategi
+                        Pemasaran Kreatif
+                      </li>
+                    </ul>
+                  </div>
+                </p-card>
+              </div>
+            </div>
+
+            <h4>NILAI PESERTA</h4>
+
+            <div class="card">
+              <p-table
+                [value]="products"
+                [tableStyle]="{ 'min-width': '50rem' }"
+              >
+                <ng-template pTemplate="header">
+                  <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Quantity</th>
+                  </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-product>
+                  <tr>
+                    <td>{{ product.code }}</td>
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.category }}</td>
+                    <td>{{ product.quantity }}</td>
+                  </tr>
+                </ng-template>
+              </p-table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Sidebar -->
+    <div class="col col-3 h-screen p-3">
+      <div class="container text-center mt-5">
+        <!-- Foto Profil dan Pengaturan -->
+        <div class="position-relative d-inline-block">
+          <img
+            src="./assets/logo1.png"
+            alt="Foto Profil"
+            class="rounded-circle img-fluid"
+            style="width: 120px; height: 120px"
+          />
+        </div>
+
+        <!-- Sambutan -->
+        <h4 class="mt-3 fw-bold">SELAMAT DATANG, MOKHAMAD GUSTIAWAN</h4>
+        <p class="text-muted">Di LMS by Adhivasindo</p>
+
+        <div class="calendar">
+          <div class="header">
+            <button (click)="previousWeek()">&lt;</button>
+            <span>{{ currentMonth }}</span>
+            <button (click)="nextWeek()">&gt;</button>
+          </div>
+          <div class="week">
+            <div
+              *ngFor="let day of currentWeek"
+              class="day"
+              [class.selected]="day.date === selectedDate"
+              (click)="selectDate(day.date)"
+            >
+              <div class="label">{{ day.label }}</div>
+              <div class="date">{{ day.date }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h4>JADWAL PEMATERI</h4>
+
+      <div class="schedule">
+        <div class="item" *ngFor="let event of schedule">
+          <div class="color-box" [style.background-color]="event.color"></div>
+          <div class="details">
+            <div class="title">{{ event.title }}</div>
+            <div class="time">{{ event.time }}</div>
+            <div class="description">{{ event.description }}</div>
+          </div>
+          <div class="arrow">&gt;</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

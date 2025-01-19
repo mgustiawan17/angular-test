@@ -1,0 +1,17 @@
+.row-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.sidebar {
+  flex: 0 0 250px;
+  height: 800px;
+  background-color: #f4f4f4;
+}
+
+.modul-container {
+  flex: 1;
+  width: 100%;
+}
